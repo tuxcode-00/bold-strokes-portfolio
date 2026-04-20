@@ -47,7 +47,7 @@ export const Route = createFileRoute("/projects/$slug")({
 });
 
 function ProjectDetail() {
-  const project = Route.useLoaderData();
+  const project = Route.useLoaderData() as (typeof projects)[number];
 
   useEffect(() => {
     window.scrollTo(0, 0);
